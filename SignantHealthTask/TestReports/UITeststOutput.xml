@@ -1,0 +1,1728 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.1 (Python 3.7.4 on win32)" generated="20210818 10:18:13.776" rpa="false" schemaversion="2">
+<suite id="s1" name="RegistrationTest" source="C:\SignantHealthTask\UITests\TestSuite\RegistrationTest.robot">
+<kw name="Start Browser" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210818 10:18:14.076" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:8080/'.</msg>
+<status status="PASS" starttime="20210818 10:18:14.076" endtime="20210818 10:18:16.601"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210818 10:18:16.601" endtime="20210818 10:18:16.720"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:14.075" endtime="20210818 10:18:16.720"/>
+</kw>
+<test id="s1-t1" name="Test Default Page Appearance">
+<kw name="Inititalize Navigation" library="BasePage">
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<arg>${LOGO_LINK}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20210818 10:18:16.743" level="INFO">Current page contains link 'Demo app'.</msg>
+<status status="PASS" starttime="20210818 10:18:16.721" endtime="20210818 10:18:16.743"/>
+</kw>
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<arg>${REGISTER_LINK}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20210818 10:18:16.763" level="INFO">Current page contains link 'Register'.</msg>
+<status status="PASS" starttime="20210818 10:18:16.743" endtime="20210818 10:18:16.763"/>
+</kw>
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<arg>${LOG_IN_LINK}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20210818 10:18:16.781" level="INFO">Current page contains link 'Log In'.</msg>
+<status status="PASS" starttime="20210818 10:18:16.763" endtime="20210818 10:18:16.782"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:16.721" endtime="20210818 10:18:16.782"/>
+</kw>
+<kw name="Inititalize Default Page" library="DefaultPage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${DEFAULT_PAGE_LABEL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:16.811" level="INFO">Element 'css:body section header h1' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:16.783" endtime="20210818 10:18:16.811"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:16.783" endtime="20210818 10:18:16.812"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:16.720" endtime="20210818 10:18:16.812"/>
+</test>
+<test id="s1-t2" name="Test Register Page Appearance">
+<kw name="Open Register Page" library="RegisterPage">
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<arg>${REGISTER_LINK}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20210818 10:18:16.826" level="INFO">Current page contains link 'Register'.</msg>
+<status status="PASS" starttime="20210818 10:18:16.815" endtime="20210818 10:18:16.826"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${REGISTER_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:16.826" level="INFO">Clicking link 'Register'.</msg>
+<status status="PASS" starttime="20210818 10:18:16.826" endtime="20210818 10:18:16.904"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${REGISTER_LABEL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210818 10:18:16.904" endtime="20210818 10:18:16.934"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_LABEL}</arg>
+<arg>Register</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:16.935" level="INFO">Verifying element 'css:body section header h1' contains exact text 'Register'.</msg>
+<status status="PASS" starttime="20210818 10:18:16.934" endtime="20210818 10:18:16.954"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:16.814" endtime="20210818 10:18:16.954"/>
+</kw>
+<kw name="Inititalize Navigation" library="BasePage">
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<arg>${LOGO_LINK}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20210818 10:18:16.966" level="INFO">Current page contains link 'Demo app'.</msg>
+<status status="PASS" starttime="20210818 10:18:16.954" endtime="20210818 10:18:16.966"/>
+</kw>
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<arg>${REGISTER_LINK}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20210818 10:18:16.980" level="INFO">Current page contains link 'Register'.</msg>
+<status status="PASS" starttime="20210818 10:18:16.966" endtime="20210818 10:18:16.980"/>
+</kw>
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<arg>${LOG_IN_LINK}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20210818 10:18:16.990" level="INFO">Current page contains link 'Log In'.</msg>
+<status status="PASS" starttime="20210818 10:18:16.980" endtime="20210818 10:18:16.990"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:16.954" endtime="20210818 10:18:16.991"/>
+</kw>
+<kw name="Initialize Register Page" library="RegisterPage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_LABEL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:17.008" level="INFO">Element 'css:body section header h1' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:16.992" endtime="20210818 10:18:17.008"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_LABEL}</arg>
+<arg>Register</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:17.008" level="INFO">Verifying element 'css:body section header h1' contains exact text 'Register'.</msg>
+<status status="PASS" starttime="20210818 10:18:17.008" endtime="20210818 10:18:17.024"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_USERNAME_LABEL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:17.046" level="INFO">Element '//section[@class="content"]/form/label[@for="username"]' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:17.024" endtime="20210818 10:18:17.046"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_USERNAME_LABEL}</arg>
+<arg>Username</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:17.046" level="INFO">Verifying element '//section[@class="content"]/form/label[@for="username"]' contains exact text 'Username'.</msg>
+<status status="PASS" starttime="20210818 10:18:17.046" endtime="20210818 10:18:17.063"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_USERNAME_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:17.083" level="INFO">Element 'id:username' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:17.063" endtime="20210818 10:18:17.083"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_PASSWORD_LABEL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:17.104" level="INFO">Element '//section[@class="content"]/form/label[@for="password"]' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:17.084" endtime="20210818 10:18:17.104"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_PASSWORD_LABEL}</arg>
+<arg>Password</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:17.104" level="INFO">Verifying element '//section[@class="content"]/form/label[@for="password"]' contains exact text 'Password'.</msg>
+<status status="PASS" starttime="20210818 10:18:17.104" endtime="20210818 10:18:17.120"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_PASSWORD_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:17.140" level="INFO">Element 'id:password' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:17.121" endtime="20210818 10:18:17.141"/>
+</kw>
+<kw name="Check If Element Has Password Type" library="BasePage">
+<arg>${REGISTER_FORM_PASSWORD_EDIT}</arg>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${is_required}</var>
+<arg>${element}</arg>
+<arg>type</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20210818 10:18:17.155" level="INFO">${is_required} = password</msg>
+<status status="PASS" starttime="20210818 10:18:17.141" endtime="20210818 10:18:17.155"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>"password"</arg>
+<arg>"${is_required}"</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210818 10:18:17.155" endtime="20210818 10:18:17.155"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.141" endtime="20210818 10:18:17.155"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_FIRST_NAME_LABEL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:17.176" level="INFO">Element '//section[@class="content"]/form/label[@for="firstname"]' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:17.155" endtime="20210818 10:18:17.176"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_FIRST_NAME_LABEL}</arg>
+<arg>First name</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:17.177" level="INFO">Verifying element '//section[@class="content"]/form/label[@for="firstname"]' contains exact text 'First name'.</msg>
+<status status="PASS" starttime="20210818 10:18:17.176" endtime="20210818 10:18:17.193"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_FIRST_NAME_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:17.214" level="INFO">Element 'id:firstname' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:17.193" endtime="20210818 10:18:17.214"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_LAST_NAME_LABEL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:17.234" level="INFO">Element '//section[@class="content"]/form/label[@for="lastname"]' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:17.214" endtime="20210818 10:18:17.234"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_LAST_NAME_LABEL}</arg>
+<arg>Family Name</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:17.235" level="INFO">Verifying element '//section[@class="content"]/form/label[@for="lastname"]' contains exact text 'Family Name'.</msg>
+<status status="PASS" starttime="20210818 10:18:17.234" endtime="20210818 10:18:17.251"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_LAST_NAME_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:17.271" level="INFO">Element 'id:lastname' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:17.251" endtime="20210818 10:18:17.271"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_PHONE_LABEL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:17.291" level="INFO">Element '//section[@class="content"]/form/label[@for="phone"]' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:17.271" endtime="20210818 10:18:17.291"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_PHONE_LABEL}</arg>
+<arg>Phone number</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:17.292" level="INFO">Verifying element '//section[@class="content"]/form/label[@for="phone"]' contains exact text 'Phone number'.</msg>
+<status status="PASS" starttime="20210818 10:18:17.291" endtime="20210818 10:18:17.311"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_PHONE_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:17.331" level="INFO">Element 'id:phone' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:17.311" endtime="20210818 10:18:17.331"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_BUTTON}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:17.350" level="INFO">Element '//section[@class="content"]/form/input[@value="Register" and @type="submit"]' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:17.331" endtime="20210818 10:18:17.350"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:16.991" endtime="20210818 10:18:17.350"/>
+</kw>
+<kw name="Check Register Page Required Elements" library="RegisterPage">
+<kw name="Check If Element Is Not Required" library="BasePage">
+<arg>${REGISTER_LABEL}</arg>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${is_required}</var>
+<arg>${element}</arg>
+<arg>required</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20210818 10:18:17.366" level="INFO">${is_required} = None</msg>
+<status status="PASS" starttime="20210818 10:18:17.352" endtime="20210818 10:18:17.366"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>"None"</arg>
+<arg>"${is_required}"</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210818 10:18:17.366" endtime="20210818 10:18:17.367"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.352" endtime="20210818 10:18:17.367"/>
+</kw>
+<kw name="Check If Element Is Not Required" library="BasePage">
+<arg>${REGISTER_FORM_USERNAME_LABEL}</arg>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${is_required}</var>
+<arg>${element}</arg>
+<arg>required</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20210818 10:18:17.380" level="INFO">${is_required} = None</msg>
+<status status="PASS" starttime="20210818 10:18:17.367" endtime="20210818 10:18:17.380"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>"None"</arg>
+<arg>"${is_required}"</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210818 10:18:17.380" endtime="20210818 10:18:17.380"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.367" endtime="20210818 10:18:17.381"/>
+</kw>
+<kw name="Check If Element Is Required" library="BasePage">
+<arg>${REGISTER_FORM_USERNAME_EDIT}</arg>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${is_required}</var>
+<arg>${element}</arg>
+<arg>required</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20210818 10:18:17.394" level="INFO">${is_required} = true</msg>
+<status status="PASS" starttime="20210818 10:18:17.381" endtime="20210818 10:18:17.394"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>"true"</arg>
+<arg>"${is_required}"</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210818 10:18:17.394" endtime="20210818 10:18:17.395"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.381" endtime="20210818 10:18:17.395"/>
+</kw>
+<kw name="Check If Element Is Not Required" library="BasePage">
+<arg>${REGISTER_FORM_PASSWORD_LABEL}</arg>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${is_required}</var>
+<arg>${element}</arg>
+<arg>required</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20210818 10:18:17.408" level="INFO">${is_required} = None</msg>
+<status status="PASS" starttime="20210818 10:18:17.396" endtime="20210818 10:18:17.408"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>"None"</arg>
+<arg>"${is_required}"</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210818 10:18:17.408" endtime="20210818 10:18:17.409"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.395" endtime="20210818 10:18:17.409"/>
+</kw>
+<kw name="Check If Element Is Required" library="BasePage">
+<arg>${REGISTER_FORM_PASSWORD_EDIT}</arg>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${is_required}</var>
+<arg>${element}</arg>
+<arg>required</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20210818 10:18:17.421" level="INFO">${is_required} = true</msg>
+<status status="PASS" starttime="20210818 10:18:17.409" endtime="20210818 10:18:17.421"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>"true"</arg>
+<arg>"${is_required}"</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210818 10:18:17.421" endtime="20210818 10:18:17.422"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.409" endtime="20210818 10:18:17.422"/>
+</kw>
+<kw name="Check If Element Is Not Required" library="BasePage">
+<arg>${REGISTER_FORM_FIRST_NAME_LABEL}</arg>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${is_required}</var>
+<arg>${element}</arg>
+<arg>required</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20210818 10:18:17.435" level="INFO">${is_required} = None</msg>
+<status status="PASS" starttime="20210818 10:18:17.422" endtime="20210818 10:18:17.435"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>"None"</arg>
+<arg>"${is_required}"</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210818 10:18:17.435" endtime="20210818 10:18:17.436"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.422" endtime="20210818 10:18:17.436"/>
+</kw>
+<kw name="Check If Element Is Required" library="BasePage">
+<arg>${REGISTER_FORM_FIRST_NAME_EDIT}</arg>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${is_required}</var>
+<arg>${element}</arg>
+<arg>required</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20210818 10:18:17.449" level="INFO">${is_required} = true</msg>
+<status status="PASS" starttime="20210818 10:18:17.436" endtime="20210818 10:18:17.449"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>"true"</arg>
+<arg>"${is_required}"</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210818 10:18:17.449" endtime="20210818 10:18:17.450"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.436" endtime="20210818 10:18:17.450"/>
+</kw>
+<kw name="Check If Element Is Not Required" library="BasePage">
+<arg>${REGISTER_FORM_LAST_NAME_LABEL}</arg>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${is_required}</var>
+<arg>${element}</arg>
+<arg>required</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20210818 10:18:17.462" level="INFO">${is_required} = None</msg>
+<status status="PASS" starttime="20210818 10:18:17.450" endtime="20210818 10:18:17.462"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>"None"</arg>
+<arg>"${is_required}"</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210818 10:18:17.463" endtime="20210818 10:18:17.463"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.450" endtime="20210818 10:18:17.463"/>
+</kw>
+<kw name="Check If Element Is Required" library="BasePage">
+<arg>${REGISTER_FORM_LAST_NAME_EDIT}</arg>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${is_required}</var>
+<arg>${element}</arg>
+<arg>required</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20210818 10:18:17.476" level="INFO">${is_required} = true</msg>
+<status status="PASS" starttime="20210818 10:18:17.463" endtime="20210818 10:18:17.476"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>"true"</arg>
+<arg>"${is_required}"</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210818 10:18:17.476" endtime="20210818 10:18:17.477"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.463" endtime="20210818 10:18:17.477"/>
+</kw>
+<kw name="Check If Element Is Not Required" library="BasePage">
+<arg>${REGISTER_FORM_PHONE_LABEL}</arg>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${is_required}</var>
+<arg>${element}</arg>
+<arg>required</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20210818 10:18:17.490" level="INFO">${is_required} = None</msg>
+<status status="PASS" starttime="20210818 10:18:17.477" endtime="20210818 10:18:17.490"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>"None"</arg>
+<arg>"${is_required}"</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210818 10:18:17.490" endtime="20210818 10:18:17.490"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.477" endtime="20210818 10:18:17.490"/>
+</kw>
+<kw name="Check If Element Is Required" library="BasePage">
+<arg>${REGISTER_FORM_PHONE_EDIT}</arg>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${is_required}</var>
+<arg>${element}</arg>
+<arg>required</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20210818 10:18:17.504" level="INFO">${is_required} = true</msg>
+<status status="PASS" starttime="20210818 10:18:17.491" endtime="20210818 10:18:17.504"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>"true"</arg>
+<arg>"${is_required}"</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210818 10:18:17.504" endtime="20210818 10:18:17.504"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.490" endtime="20210818 10:18:17.504"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.352" endtime="20210818 10:18:17.504"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:16.814" endtime="20210818 10:18:17.505"/>
+</test>
+<test id="s1-t3" name="Test Log In Page Appearance">
+<kw name="Open Log In Page" library="LogInPage">
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<arg>${LOG_IN_LINK}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20210818 10:18:17.518" level="INFO">Current page contains link 'Log In'.</msg>
+<status status="PASS" starttime="20210818 10:18:17.508" endtime="20210818 10:18:17.518"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${LOG_IN_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:17.518" level="INFO">Clicking link 'Log In'.</msg>
+<status status="PASS" starttime="20210818 10:18:17.518" endtime="20210818 10:18:17.571"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LOG_IN_LABEL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210818 10:18:17.572" endtime="20210818 10:18:17.590"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${LOG_IN_LABEL}</arg>
+<arg>Log In</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:17.591" level="INFO">Verifying element 'css:body section header h1' contains exact text 'Log In'.</msg>
+<status status="PASS" starttime="20210818 10:18:17.591" endtime="20210818 10:18:17.608"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.507" endtime="20210818 10:18:17.608"/>
+</kw>
+<kw name="Inititalize Navigation" library="BasePage">
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<arg>${LOGO_LINK}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20210818 10:18:17.620" level="INFO">Current page contains link 'Demo app'.</msg>
+<status status="PASS" starttime="20210818 10:18:17.609" endtime="20210818 10:18:17.620"/>
+</kw>
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<arg>${REGISTER_LINK}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20210818 10:18:17.630" level="INFO">Current page contains link 'Register'.</msg>
+<status status="PASS" starttime="20210818 10:18:17.620" endtime="20210818 10:18:17.630"/>
+</kw>
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<arg>${LOG_IN_LINK}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20210818 10:18:17.639" level="INFO">Current page contains link 'Log In'.</msg>
+<status status="PASS" starttime="20210818 10:18:17.630" endtime="20210818 10:18:17.639"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.609" endtime="20210818 10:18:17.639"/>
+</kw>
+<kw name="Initialize Log In Page" library="LogInPage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${LOG_IN_LABEL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:17.656" level="INFO">Element 'css:body section header h1' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:17.640" endtime="20210818 10:18:17.656"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${LOG_IN_LABEL}</arg>
+<arg>Log In</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:17.657" level="INFO">Verifying element 'css:body section header h1' contains exact text 'Log In'.</msg>
+<status status="PASS" starttime="20210818 10:18:17.657" endtime="20210818 10:18:17.669"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${LOG_IN_FORM_USERNAME_LABEL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:17.686" level="INFO">Element '//section[@class="content"]/form/label[@for="username"]' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:17.669" endtime="20210818 10:18:17.686"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${LOG_IN_FORM_USERNAME_LABEL}</arg>
+<arg>Username</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:17.686" level="INFO">Verifying element '//section[@class="content"]/form/label[@for="username"]' contains exact text 'Username'.</msg>
+<status status="PASS" starttime="20210818 10:18:17.686" endtime="20210818 10:18:17.703"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${LOG_IN_FORM_USERNAME_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:17.721" level="INFO">Element 'id:username' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:17.703" endtime="20210818 10:18:17.721"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${LOG_IN_FORM_PASSWORD_LABEL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:17.738" level="INFO">Element '//section[@class="content"]/form/label[@for="password"]' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:17.721" endtime="20210818 10:18:17.738"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${LOG_IN_FORM_PASSWORD_LABEL}</arg>
+<arg>Password</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:17.739" level="INFO">Verifying element '//section[@class="content"]/form/label[@for="password"]' contains exact text 'Password'.</msg>
+<status status="PASS" starttime="20210818 10:18:17.738" endtime="20210818 10:18:17.757"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${LOG_IN_FORM_PASSWORD_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:17.775" level="INFO">Element 'id:password' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:17.758" endtime="20210818 10:18:17.775"/>
+</kw>
+<kw name="Check If Element Has Password Type" library="BasePage">
+<arg>${LOG_IN_FORM_PASSWORD_EDIT}</arg>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${is_required}</var>
+<arg>${element}</arg>
+<arg>type</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20210818 10:18:17.788" level="INFO">${is_required} = password</msg>
+<status status="PASS" starttime="20210818 10:18:17.775" endtime="20210818 10:18:17.788"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>"password"</arg>
+<arg>"${is_required}"</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210818 10:18:17.788" endtime="20210818 10:18:17.789"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.775" endtime="20210818 10:18:17.789"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${LOG_IN_BUTTON}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:17.809" level="INFO">Element '//section[@class="content"]/form/input[@value="Log In" and @type="submit"]' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:17.789" endtime="20210818 10:18:17.809"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.640" endtime="20210818 10:18:17.809"/>
+</kw>
+<kw name="Check Log In Page Required Elements" library="LogInPage">
+<kw name="Check If Element Is Not Required" library="BasePage">
+<arg>${LOG_IN_LABEL}</arg>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${is_required}</var>
+<arg>${element}</arg>
+<arg>required</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20210818 10:18:17.823" level="INFO">${is_required} = None</msg>
+<status status="PASS" starttime="20210818 10:18:17.811" endtime="20210818 10:18:17.824"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>"None"</arg>
+<arg>"${is_required}"</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210818 10:18:17.824" endtime="20210818 10:18:17.824"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.810" endtime="20210818 10:18:17.824"/>
+</kw>
+<kw name="Check If Element Is Not Required" library="BasePage">
+<arg>${LOG_IN_FORM_USERNAME_LABEL}</arg>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${is_required}</var>
+<arg>${element}</arg>
+<arg>required</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20210818 10:18:17.836" level="INFO">${is_required} = None</msg>
+<status status="PASS" starttime="20210818 10:18:17.825" endtime="20210818 10:18:17.836"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>"None"</arg>
+<arg>"${is_required}"</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210818 10:18:17.837" endtime="20210818 10:18:17.837"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.824" endtime="20210818 10:18:17.837"/>
+</kw>
+<kw name="Check If Element Is Required" library="BasePage">
+<arg>${LOG_IN_FORM_USERNAME_EDIT}</arg>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${is_required}</var>
+<arg>${element}</arg>
+<arg>required</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20210818 10:18:17.849" level="INFO">${is_required} = true</msg>
+<status status="PASS" starttime="20210818 10:18:17.838" endtime="20210818 10:18:17.849"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>"true"</arg>
+<arg>"${is_required}"</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210818 10:18:17.849" endtime="20210818 10:18:17.850"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.837" endtime="20210818 10:18:17.850"/>
+</kw>
+<kw name="Check If Element Is Not Required" library="BasePage">
+<arg>${LOG_IN_FORM_PASSWORD_LABEL}</arg>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${is_required}</var>
+<arg>${element}</arg>
+<arg>required</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20210818 10:18:17.863" level="INFO">${is_required} = None</msg>
+<status status="PASS" starttime="20210818 10:18:17.850" endtime="20210818 10:18:17.863"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>"None"</arg>
+<arg>"${is_required}"</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210818 10:18:17.863" endtime="20210818 10:18:17.864"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.850" endtime="20210818 10:18:17.864"/>
+</kw>
+<kw name="Check If Element Is Required" library="BasePage">
+<arg>${LOG_IN_FORM_PASSWORD_EDIT}</arg>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${is_required}</var>
+<arg>${element}</arg>
+<arg>required</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20210818 10:18:17.877" level="INFO">${is_required} = true</msg>
+<status status="PASS" starttime="20210818 10:18:17.864" endtime="20210818 10:18:17.877"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>"true"</arg>
+<arg>"${is_required}"</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210818 10:18:17.877" endtime="20210818 10:18:17.878"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.864" endtime="20210818 10:18:17.878"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.810" endtime="20210818 10:18:17.878"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.507" endtime="20210818 10:18:17.879"/>
+</test>
+<test id="s1-t4" name="Create User Information">
+<kw name="Get First Name" library="NameGenerator">
+<var>${user_first_name}</var>
+<msg timestamp="20210818 10:18:17.899" level="INFO">${user_first_name} = Gary</msg>
+<status status="PASS" starttime="20210818 10:18:17.881" endtime="20210818 10:18:17.899"/>
+</kw>
+<kw name="Get Last Name" library="NameGenerator">
+<var>${user_last_name}</var>
+<msg timestamp="20210818 10:18:17.950" level="INFO">${user_last_name} = Gendel</msg>
+<status status="PASS" starttime="20210818 10:18:17.900" endtime="20210818 10:18:17.950"/>
+</kw>
+<kw name="Get Username" library="NameGenerator">
+<var>${username}</var>
+<arg>${user_first_name}</arg>
+<arg>${user_last_name}</arg>
+<msg timestamp="20210818 10:18:17.951" level="INFO">${username} = GaryGendel</msg>
+<status status="PASS" starttime="20210818 10:18:17.951" endtime="20210818 10:18:17.951"/>
+</kw>
+<kw name="Get Password" library="NameGenerator">
+<var>${user_password}</var>
+<msg timestamp="20210818 10:18:17.952" level="INFO">${user_password} = 2PI6LA</msg>
+<status status="PASS" starttime="20210818 10:18:17.952" endtime="20210818 10:18:17.952"/>
+</kw>
+<kw name="Get Phone Number" library="NameGenerator">
+<var>${user_phone_number}</var>
+<msg timestamp="20210818 10:18:17.953" level="INFO">${user_phone_number} = 5877497806</msg>
+<status status="PASS" starttime="20210818 10:18:17.953" endtime="20210818 10:18:17.953"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${user_first_name}</arg>
+<arg>${user_first_name}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20210818 10:18:17.954" level="INFO">${user_first_name} = Gary</msg>
+<status status="PASS" starttime="20210818 10:18:17.953" endtime="20210818 10:18:17.954"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${user_last_name}</arg>
+<arg>${user_last_name}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20210818 10:18:17.955" level="INFO">${user_last_name} = Gendel</msg>
+<status status="PASS" starttime="20210818 10:18:17.954" endtime="20210818 10:18:17.955"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${username}</arg>
+<arg>${username}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20210818 10:18:17.955" level="INFO">${username} = GaryGendel</msg>
+<status status="PASS" starttime="20210818 10:18:17.955" endtime="20210818 10:18:17.955"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${user_password}</arg>
+<arg>${user_password}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20210818 10:18:17.956" level="INFO">${user_password} = 2PI6LA</msg>
+<status status="PASS" starttime="20210818 10:18:17.956" endtime="20210818 10:18:17.956"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${user_phone_number}</arg>
+<arg>${user_phone_number}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20210818 10:18:17.957" level="INFO">${user_phone_number} = 5877497806</msg>
+<status status="PASS" starttime="20210818 10:18:17.957" endtime="20210818 10:18:17.957"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.880" endtime="20210818 10:18:17.958"/>
+</test>
+<test id="s1-t5" name="Test Register New User">
+<kw name="Open Register Page" library="RegisterPage">
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<arg>${REGISTER_LINK}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20210818 10:18:17.971" level="INFO">Current page contains link 'Register'.</msg>
+<status status="PASS" starttime="20210818 10:18:17.960" endtime="20210818 10:18:17.971"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${REGISTER_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:17.972" level="INFO">Clicking link 'Register'.</msg>
+<status status="PASS" starttime="20210818 10:18:17.972" endtime="20210818 10:18:18.029"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${REGISTER_LABEL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210818 10:18:18.029" endtime="20210818 10:18:18.048"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_LABEL}</arg>
+<arg>Register</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:18.049" level="INFO">Verifying element 'css:body section header h1' contains exact text 'Register'.</msg>
+<status status="PASS" starttime="20210818 10:18:18.048" endtime="20210818 10:18:18.065"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.960" endtime="20210818 10:18:18.065"/>
+</kw>
+<kw name="Input Username" library="RegisterPage">
+<arg>${username}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_USERNAME_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:18.086" level="INFO">Element 'id:username' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:18.067" endtime="20210818 10:18:18.086"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_USERNAME_EDIT}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:18.087" level="INFO">Typing text 'GaryGendel' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20210818 10:18:18.087" endtime="20210818 10:18:18.156"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:18.066" endtime="20210818 10:18:18.156"/>
+</kw>
+<kw name="Input First Name" library="RegisterPage">
+<arg>${user_first_name}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_FIRST_NAME_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:18.176" level="INFO">Element 'id:firstname' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:18.157" endtime="20210818 10:18:18.176"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_FIRST_NAME_EDIT}</arg>
+<arg>${first_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:18.176" level="INFO">Typing text 'Gary' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20210818 10:18:18.176" endtime="20210818 10:18:18.238"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:18.157" endtime="20210818 10:18:18.238"/>
+</kw>
+<kw name="Input Last Name" library="RegisterPage">
+<arg>${user_last_name}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_LAST_NAME_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:18.257" level="INFO">Element 'id:lastname' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:18.239" endtime="20210818 10:18:18.257"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_LAST_NAME_EDIT}</arg>
+<arg>${last_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:18.258" level="INFO">Typing text 'Gendel' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20210818 10:18:18.257" endtime="20210818 10:18:18.319"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:18.239" endtime="20210818 10:18:18.320"/>
+</kw>
+<kw name="Input Username Password" library="RegisterPage">
+<arg>${user_password}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_PASSWORD_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:18.338" level="INFO">Element 'id:password' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:18.321" endtime="20210818 10:18:18.338"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_PASSWORD_EDIT}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:18.339" level="INFO">Typing text '2PI6LA' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210818 10:18:18.338" endtime="20210818 10:18:18.402"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:18.320" endtime="20210818 10:18:18.402"/>
+</kw>
+<kw name="Input Phone Number" library="RegisterPage">
+<arg>${user_phone_number}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_PHONE_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:18.420" level="INFO">Element 'id:phone' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:18.404" endtime="20210818 10:18:18.420"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_PHONE_EDIT}</arg>
+<arg>${phone_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:18.421" level="INFO">Typing text '5877497806' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20210818 10:18:18.420" endtime="20210818 10:18:18.486"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:18.403" endtime="20210818 10:18:18.486"/>
+</kw>
+<kw name="Click Register Button" library="RegisterPage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_BUTTON}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:18.505" level="INFO">Element '//section[@class="content"]/form/input[@value="Register" and @type="submit"]' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:18.487" endtime="20210818 10:18:18.505"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${REGISTER_BUTTON}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210818 10:18:18.505" endtime="20210818 10:18:18.525"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${REGISTER_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:18.526" level="INFO">Clicking button '//section[@class="content"]/form/input[@value="Register" and @type="submit"]'.</msg>
+<status status="PASS" starttime="20210818 10:18:18.525" endtime="20210818 10:18:18.652"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${is_alert_seen}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${REGISTER_USER_ALREADY_EXIST_ALERT}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_USER_ALREADY_EXIST_ALERT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210818 10:18:18.805" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210818 10:18:18.663" endtime="20210818 10:18:18.805"/>
+</kw>
+<msg timestamp="20210818 10:18:18.814" level="FAIL">Element with locator '//section[@class="content"]/div[@class="flash"]' not found.</msg>
+<status status="FAIL" starttime="20210818 10:18:18.652" endtime="20210818 10:18:18.814"/>
+</kw>
+<msg timestamp="20210818 10:18:18.814" level="INFO">${is_alert_seen} = False</msg>
+<status status="PASS" starttime="20210818 10:18:18.652" endtime="20210818 10:18:18.814"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_alert_seen}">
+<kw name="Initialize Register Page" library="RegisterPage">
+<status status="NOT RUN" starttime="20210818 10:18:18.814" endtime="20210818 10:18:18.814"/>
+</kw>
+<status status="NOT RUN" starttime="20210818 10:18:18.814" endtime="20210818 10:18:18.814"/>
+</branch>
+<branch type="ELSE">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${REGISTER_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20210818 10:18:18.814" endtime="20210818 10:18:18.823"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:18.814" endtime="20210818 10:18:18.823"/>
+</branch>
+<status status="PASS" starttime="20210818 10:18:18.814" endtime="20210818 10:18:18.823"/>
+</if>
+<status status="PASS" starttime="20210818 10:18:18.487" endtime="20210818 10:18:18.823"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:17.959" endtime="20210818 10:18:18.824"/>
+</test>
+<test id="s1-t6" name="Test Log In Registered User">
+<kw name="Open Log In Page" library="LogInPage">
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<arg>${LOG_IN_LINK}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20210818 10:18:18.838" level="INFO">Current page contains link 'Log In'.</msg>
+<status status="PASS" starttime="20210818 10:18:18.827" endtime="20210818 10:18:18.838"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${LOG_IN_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:18.838" level="INFO">Clicking link 'Log In'.</msg>
+<status status="PASS" starttime="20210818 10:18:18.838" endtime="20210818 10:18:18.895"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LOG_IN_LABEL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210818 10:18:18.896" endtime="20210818 10:18:18.915"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${LOG_IN_LABEL}</arg>
+<arg>Log In</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:18.915" level="INFO">Verifying element 'css:body section header h1' contains exact text 'Log In'.</msg>
+<status status="PASS" starttime="20210818 10:18:18.915" endtime="20210818 10:18:18.935"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:18.826" endtime="20210818 10:18:18.935"/>
+</kw>
+<kw name="Input Login Username" library="LogInPage">
+<arg>${username}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${LOG_IN_FORM_USERNAME_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:18.956" level="INFO">Element 'id:username' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:18.937" endtime="20210818 10:18:18.957"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOG_IN_FORM_USERNAME_EDIT}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:18.957" level="INFO">Typing text 'GaryGendel' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20210818 10:18:18.957" endtime="20210818 10:18:19.022"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:18.936" endtime="20210818 10:18:19.022"/>
+</kw>
+<kw name="Input Login Password" library="LogInPage">
+<arg>${user_password}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${LOG_IN_FORM_PASSWORD_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:19.040" level="INFO">Element 'id:password' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:19.023" endtime="20210818 10:18:19.040"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOG_IN_FORM_PASSWORD_EDIT}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:19.040" level="INFO">Typing text '2PI6LA' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210818 10:18:19.040" endtime="20210818 10:18:19.102"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:19.023" endtime="20210818 10:18:19.102"/>
+</kw>
+<kw name="Click Log In Button" library="LogInPage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${LOG_IN_BUTTON}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:19.120" level="INFO">Element '//section[@class="content"]/form/input[@value="Log In" and @type="submit"]' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:19.103" endtime="20210818 10:18:19.121"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOG_IN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:19.121" level="INFO">Clicking button '//section[@class="content"]/form/input[@value="Log In" and @type="submit"]'.</msg>
+<status status="PASS" starttime="20210818 10:18:19.121" endtime="20210818 10:18:19.236"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${LOG_IN_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20210818 10:18:19.236" endtime="20210818 10:18:19.244"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:19.103" endtime="20210818 10:18:19.244"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:18.825" endtime="20210818 10:18:19.245"/>
+</test>
+<test id="s1-t7" name="Test User Personal Data">
+<kw name="Inititalize User Page" library="UserPage">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>User Information - Demo App</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210818 10:18:19.254" level="INFO">Page title is 'User Information - Demo App'.</msg>
+<status status="PASS" starttime="20210818 10:18:19.248" endtime="20210818 10:18:19.254"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${USER_PAGE_LABEL}</arg>
+<arg>User Information</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:19.254" level="INFO">Verifying element 'css:body section header h1' contains exact text 'User Information'.</msg>
+<status status="PASS" starttime="20210818 10:18:19.254" endtime="20210818 10:18:19.278"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${USER_TABLE_USERNAME_LABEL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:19.298" level="INFO">Element '//section[@class="content"]/table/tbody/tr/td[@id="username"]/preceding-sibling::td' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:19.278" endtime="20210818 10:18:19.298"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${USER_TABLE_USERNAME_VALUE}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:19.314" level="INFO">Element 'id:username' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:19.298" endtime="20210818 10:18:19.314"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${USER_TABLE_FIRST_NAME_LABEL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:19.335" level="INFO">Element '//section[@class="content"]/table/tbody/tr/td[@id="firstname"]/preceding-sibling::td' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:19.314" endtime="20210818 10:18:19.335"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${USER_TABLE_FIRST_NAME_VALUE}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:19.353" level="INFO">Element 'id:firstname' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:19.335" endtime="20210818 10:18:19.353"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${USER_TABLE_LAST_NAME_LABEL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:19.373" level="INFO">Element '//section[@class="content"]/table/tbody/tr/td[@id="lastname"]/preceding-sibling::td' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:19.353" endtime="20210818 10:18:19.373"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${USER_TABLE_LAST_NAME_VALUE}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:19.390" level="INFO">Element 'id:lastname' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:19.373" endtime="20210818 10:18:19.390"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${USER_TABLE_PHONE_LABEL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:19.411" level="INFO">Element '//section[@class="content"]/table/tbody/tr/td[@id="phone"]/preceding-sibling::td' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:19.390" endtime="20210818 10:18:19.411"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${USER_LOGGED}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:19.431" level="INFO">Element '//nav/ul/li[1]/span' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:19.411" endtime="20210818 10:18:19.431"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:19.248" endtime="20210818 10:18:19.432"/>
+</kw>
+<kw name="Check Logged Username" library="UserPage">
+<arg>${username}</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${USER_TABLE_USERNAME_VALUE}</arg>
+<arg>${username}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:19.433" level="INFO">Verifying element 'id:username' contains exact text 'GaryGendel'.</msg>
+<status status="PASS" starttime="20210818 10:18:19.433" endtime="20210818 10:18:19.449"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:19.432" endtime="20210818 10:18:19.449"/>
+</kw>
+<kw name="Check Logged User First Name" library="UserPage">
+<arg>${user_first_name}</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${USER_TABLE_FIRST_NAME_VALUE}</arg>
+<arg>${first_name}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:19.451" level="INFO">Verifying element 'id:firstname' contains exact text 'Gary'.</msg>
+<status status="PASS" starttime="20210818 10:18:19.450" endtime="20210818 10:18:19.468"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:19.450" endtime="20210818 10:18:19.468"/>
+</kw>
+<kw name="Check Logged User Last Name" library="UserPage">
+<arg>${user_last_name}</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${USER_TABLE_LAST_NAME_VALUE}</arg>
+<arg>${last_name}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:19.470" level="INFO">Verifying element 'id:lastname' contains exact text 'Gendel'.</msg>
+<status status="PASS" starttime="20210818 10:18:19.469" endtime="20210818 10:18:19.486"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:19.469" endtime="20210818 10:18:19.486"/>
+</kw>
+<kw name="Check Logged User Phone" library="UserPage">
+<arg>${user_phone_number}</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${USER_TABLE_PHONE_VALUE}</arg>
+<arg>${phone}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:19.488" level="INFO">Verifying element 'id:phone' contains exact text '5877497806'.</msg>
+<status status="PASS" starttime="20210818 10:18:19.487" endtime="20210818 10:18:19.504"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:19.487" endtime="20210818 10:18:19.504"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:19.247" endtime="20210818 10:18:19.505"/>
+</test>
+<test id="s1-t8" name="Test Log Out User">
+<kw name="Log Out User" library="UserPage">
+<arg>${username}</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${USER_LOGGED}</arg>
+<arg>${username}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:19.508" level="INFO">Verifying element '//nav/ul/li[1]/span' contains exact text 'GaryGendel'.</msg>
+<status status="PASS" starttime="20210818 10:18:19.508" endtime="20210818 10:18:19.524"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${USER_LOG_OUT_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:19.524" level="INFO">Clicking link 'Log Out'.</msg>
+<status status="PASS" starttime="20210818 10:18:19.524" endtime="20210818 10:18:19.587"/>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<arg>${username}</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<msg timestamp="20210818 10:18:19.609" level="INFO">Current page does not contain text 'GaryGendel'.</msg>
+<status status="PASS" starttime="20210818 10:18:19.587" endtime="20210818 10:18:19.610"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:19.507" endtime="20210818 10:18:19.610"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:19.506" endtime="20210818 10:18:19.610"/>
+</test>
+<test id="s1-t9" name="Test Register The Same User">
+<kw name="Open Register Page" library="RegisterPage">
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<arg>${REGISTER_LINK}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20210818 10:18:19.623" level="INFO">Current page contains link 'Register'.</msg>
+<status status="PASS" starttime="20210818 10:18:19.612" endtime="20210818 10:18:19.623"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${REGISTER_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:19.624" level="INFO">Clicking link 'Register'.</msg>
+<status status="PASS" starttime="20210818 10:18:19.624" endtime="20210818 10:18:19.687"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${REGISTER_LABEL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210818 10:18:19.687" endtime="20210818 10:18:19.708"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_LABEL}</arg>
+<arg>Register</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:19.708" level="INFO">Verifying element 'css:body section header h1' contains exact text 'Register'.</msg>
+<status status="PASS" starttime="20210818 10:18:19.708" endtime="20210818 10:18:19.726"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:19.612" endtime="20210818 10:18:19.727"/>
+</kw>
+<kw name="Input Username" library="RegisterPage">
+<arg>${username}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_USERNAME_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:19.746" level="INFO">Element 'id:username' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:19.728" endtime="20210818 10:18:19.746"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_USERNAME_EDIT}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:19.746" level="INFO">Typing text 'GaryGendel' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20210818 10:18:19.746" endtime="20210818 10:18:19.813"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:19.728" endtime="20210818 10:18:19.813"/>
+</kw>
+<kw name="Input First Name" library="RegisterPage">
+<arg>${user_first_name}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_FIRST_NAME_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:19.832" level="INFO">Element 'id:firstname' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:19.814" endtime="20210818 10:18:19.832"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_FIRST_NAME_EDIT}</arg>
+<arg>${first_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:19.832" level="INFO">Typing text 'Gary' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20210818 10:18:19.832" endtime="20210818 10:18:19.897"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:19.814" endtime="20210818 10:18:19.898"/>
+</kw>
+<kw name="Input Last Name" library="RegisterPage">
+<arg>${user_last_name}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_LAST_NAME_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:19.917" level="INFO">Element 'id:lastname' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:19.899" endtime="20210818 10:18:19.917"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_LAST_NAME_EDIT}</arg>
+<arg>${last_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:19.917" level="INFO">Typing text 'Gendel' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20210818 10:18:19.917" endtime="20210818 10:18:19.981"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:19.898" endtime="20210818 10:18:19.981"/>
+</kw>
+<kw name="Input Username Password" library="RegisterPage">
+<arg>${user_password}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_PASSWORD_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:19.999" level="INFO">Element 'id:password' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:19.982" endtime="20210818 10:18:19.999"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_PASSWORD_EDIT}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:20.000" level="INFO">Typing text '2PI6LA' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210818 10:18:19.999" endtime="20210818 10:18:20.063"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:19.981" endtime="20210818 10:18:20.063"/>
+</kw>
+<kw name="Input Phone Number" library="RegisterPage">
+<arg>${user_phone_number}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_PHONE_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:20.083" level="INFO">Element 'id:phone' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:20.065" endtime="20210818 10:18:20.083"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_PHONE_EDIT}</arg>
+<arg>${phone_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:20.083" level="INFO">Typing text '5877497806' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20210818 10:18:20.083" endtime="20210818 10:18:20.157"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:20.064" endtime="20210818 10:18:20.158"/>
+</kw>
+<kw name="Click Register Button" library="RegisterPage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_BUTTON}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:20.176" level="INFO">Element '//section[@class="content"]/form/input[@value="Register" and @type="submit"]' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:20.159" endtime="20210818 10:18:20.176"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${REGISTER_BUTTON}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210818 10:18:20.177" endtime="20210818 10:18:20.197"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${REGISTER_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:20.198" level="INFO">Clicking button '//section[@class="content"]/form/input[@value="Register" and @type="submit"]'.</msg>
+<status status="PASS" starttime="20210818 10:18:20.198" endtime="20210818 10:18:20.258"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${is_alert_seen}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${REGISTER_USER_ALREADY_EXIST_ALERT}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_USER_ALREADY_EXIST_ALERT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:20.280" level="INFO">Element '//section[@class="content"]/div[@class="flash"]' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:20.258" endtime="20210818 10:18:20.280"/>
+</kw>
+<msg timestamp="20210818 10:18:20.280" level="INFO">${is_alert_seen} = True</msg>
+<status status="PASS" starttime="20210818 10:18:20.258" endtime="20210818 10:18:20.280"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_alert_seen}">
+<kw name="Initialize Register Page" library="RegisterPage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_LABEL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:20.300" level="INFO">Element 'css:body section header h1' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:20.281" endtime="20210818 10:18:20.301"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_LABEL}</arg>
+<arg>Register</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:20.301" level="INFO">Verifying element 'css:body section header h1' contains exact text 'Register'.</msg>
+<status status="PASS" starttime="20210818 10:18:20.301" endtime="20210818 10:18:20.320"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_USERNAME_LABEL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:20.338" level="INFO">Element '//section[@class="content"]/form/label[@for="username"]' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:20.320" endtime="20210818 10:18:20.338"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_USERNAME_LABEL}</arg>
+<arg>Username</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:20.339" level="INFO">Verifying element '//section[@class="content"]/form/label[@for="username"]' contains exact text 'Username'.</msg>
+<status status="PASS" starttime="20210818 10:18:20.338" endtime="20210818 10:18:20.358"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_USERNAME_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:20.375" level="INFO">Element 'id:username' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:20.358" endtime="20210818 10:18:20.375"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_PASSWORD_LABEL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:20.392" level="INFO">Element '//section[@class="content"]/form/label[@for="password"]' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:20.375" endtime="20210818 10:18:20.393"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_PASSWORD_LABEL}</arg>
+<arg>Password</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:20.393" level="INFO">Verifying element '//section[@class="content"]/form/label[@for="password"]' contains exact text 'Password'.</msg>
+<status status="PASS" starttime="20210818 10:18:20.393" endtime="20210818 10:18:20.409"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_PASSWORD_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:20.426" level="INFO">Element 'id:password' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:20.410" endtime="20210818 10:18:20.426"/>
+</kw>
+<kw name="Check If Element Has Password Type" library="BasePage">
+<arg>${REGISTER_FORM_PASSWORD_EDIT}</arg>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${is_required}</var>
+<arg>${element}</arg>
+<arg>type</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20210818 10:18:20.439" level="INFO">${is_required} = password</msg>
+<status status="PASS" starttime="20210818 10:18:20.427" endtime="20210818 10:18:20.439"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>"password"</arg>
+<arg>"${is_required}"</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210818 10:18:20.440" endtime="20210818 10:18:20.440"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:20.426" endtime="20210818 10:18:20.440"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_FIRST_NAME_LABEL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:20.456" level="INFO">Element '//section[@class="content"]/form/label[@for="firstname"]' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:20.440" endtime="20210818 10:18:20.457"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_FIRST_NAME_LABEL}</arg>
+<arg>First name</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:20.457" level="INFO">Verifying element '//section[@class="content"]/form/label[@for="firstname"]' contains exact text 'First name'.</msg>
+<status status="PASS" starttime="20210818 10:18:20.457" endtime="20210818 10:18:20.473"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_FIRST_NAME_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:20.489" level="INFO">Element 'id:firstname' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:20.473" endtime="20210818 10:18:20.489"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_LAST_NAME_LABEL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:20.505" level="INFO">Element '//section[@class="content"]/form/label[@for="lastname"]' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:20.490" endtime="20210818 10:18:20.505"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_LAST_NAME_LABEL}</arg>
+<arg>Family Name</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:20.506" level="INFO">Verifying element '//section[@class="content"]/form/label[@for="lastname"]' contains exact text 'Family Name'.</msg>
+<status status="PASS" starttime="20210818 10:18:20.506" endtime="20210818 10:18:20.522"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_LAST_NAME_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:20.540" level="INFO">Element 'id:lastname' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:20.522" endtime="20210818 10:18:20.540"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_PHONE_LABEL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:20.558" level="INFO">Element '//section[@class="content"]/form/label[@for="phone"]' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:20.541" endtime="20210818 10:18:20.558"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_PHONE_LABEL}</arg>
+<arg>Phone number</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:20.558" level="INFO">Verifying element '//section[@class="content"]/form/label[@for="phone"]' contains exact text 'Phone number'.</msg>
+<status status="PASS" starttime="20210818 10:18:20.558" endtime="20210818 10:18:20.574"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_FORM_PHONE_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:20.591" level="INFO">Element 'id:phone' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:20.574" endtime="20210818 10:18:20.591"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_BUTTON}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:20.609" level="INFO">Element '//section[@class="content"]/form/input[@value="Register" and @type="submit"]' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:20.592" endtime="20210818 10:18:20.609"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:20.280" endtime="20210818 10:18:20.609"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:20.280" endtime="20210818 10:18:20.609"/>
+</branch>
+<branch type="ELSE">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${REGISTER_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="NOT RUN" starttime="20210818 10:18:20.609" endtime="20210818 10:18:20.609"/>
+</kw>
+<status status="NOT RUN" starttime="20210818 10:18:20.609" endtime="20210818 10:18:20.609"/>
+</branch>
+<status status="PASS" starttime="20210818 10:18:20.280" endtime="20210818 10:18:20.609"/>
+</if>
+<status status="PASS" starttime="20210818 10:18:20.158" endtime="20210818 10:18:20.610"/>
+</kw>
+<kw name="User Already Exists Alert Shown" library="RegisterPage">
+<arg>${username}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${REGISTER_USER_ALREADY_EXIST_ALERT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:20.628" level="INFO">Element '//section[@class="content"]/div[@class="flash"]' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:20.611" endtime="20210818 10:18:20.628"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${REGISTER_USER_ALREADY_EXIST_ALERT}</arg>
+<arg>User ${user} is already registered.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:20.628" level="INFO">Verifying element '//section[@class="content"]/div[@class="flash"]' contains exact text 'User GaryGendel is already registered.'.</msg>
+<status status="PASS" starttime="20210818 10:18:20.628" endtime="20210818 10:18:20.645"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:20.610" endtime="20210818 10:18:20.645"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:19.611" endtime="20210818 10:18:20.646"/>
+</test>
+<test id="s1-t10" name="Test Not Registered User Log In">
+<kw name="Open Log In Page" library="LogInPage">
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<arg>${LOG_IN_LINK}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20210818 10:18:20.660" level="INFO">Current page contains link 'Log In'.</msg>
+<status status="PASS" starttime="20210818 10:18:20.649" endtime="20210818 10:18:20.660"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${LOG_IN_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:20.660" level="INFO">Clicking link 'Log In'.</msg>
+<status status="PASS" starttime="20210818 10:18:20.660" endtime="20210818 10:18:20.724"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LOG_IN_LABEL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210818 10:18:20.724" endtime="20210818 10:18:20.745"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${LOG_IN_LABEL}</arg>
+<arg>Log In</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:20.745" level="INFO">Verifying element 'css:body section header h1' contains exact text 'Log In'.</msg>
+<status status="PASS" starttime="20210818 10:18:20.745" endtime="20210818 10:18:20.762"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:20.648" endtime="20210818 10:18:20.762"/>
+</kw>
+<kw name="Input Login Username" library="LogInPage">
+<arg>${user_password}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${LOG_IN_FORM_USERNAME_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:20.781" level="INFO">Element 'id:username' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:20.763" endtime="20210818 10:18:20.781"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOG_IN_FORM_USERNAME_EDIT}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:20.781" level="INFO">Typing text '2PI6LA' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20210818 10:18:20.781" endtime="20210818 10:18:20.846"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:20.763" endtime="20210818 10:18:20.846"/>
+</kw>
+<kw name="Input Login Password" library="LogInPage">
+<arg>${user_password}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${LOG_IN_FORM_PASSWORD_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:20.865" level="INFO">Element 'id:password' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:20.847" endtime="20210818 10:18:20.865"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOG_IN_FORM_PASSWORD_EDIT}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:20.865" level="INFO">Typing text '2PI6LA' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210818 10:18:20.865" endtime="20210818 10:18:20.930"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:20.847" endtime="20210818 10:18:20.930"/>
+</kw>
+<kw name="Click Log In Button" library="LogInPage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${LOG_IN_BUTTON}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:20.949" level="INFO">Element '//section[@class="content"]/form/input[@value="Log In" and @type="submit"]' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:20.931" endtime="20210818 10:18:20.949"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOG_IN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:20.950" level="INFO">Clicking button '//section[@class="content"]/form/input[@value="Log In" and @type="submit"]'.</msg>
+<status status="PASS" starttime="20210818 10:18:20.950" endtime="20210818 10:18:21.022"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${LOG_IN_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20210818 10:18:21.023" endtime="20210818 10:18:21.031"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:20.931" endtime="20210818 10:18:21.031"/>
+</kw>
+<kw name="Initialize Log In Error Page" library="LogInErrorPage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${ERROR_PAGE_LABEL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:21.051" level="INFO">Element 'css:body section header h1' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:21.032" endtime="20210818 10:18:21.051"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${ERROR_PAGE_LABEL}</arg>
+<arg>Login Failure</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:21.053" level="INFO">Verifying element 'css:body section header h1' contains exact text 'Login Failure'.</msg>
+<status status="PASS" starttime="20210818 10:18:21.051" endtime="20210818 10:18:21.073"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:21.032" endtime="20210818 10:18:21.073"/>
+</kw>
+<kw name="Log In Error Message Should Be Shown" library="LogInErrorPage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${ERROR_PAGE_MESSAGE}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:21.097" level="INFO">Element 'css:body section p' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:21.075" endtime="20210818 10:18:21.097"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${ERROR_PAGE_MESSAGE}</arg>
+<arg>You provided incorrect login details</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20210818 10:18:21.116" level="INFO">Element 'css:body section p' contains text 'You provided incorrect login details'.</msg>
+<status status="PASS" starttime="20210818 10:18:21.097" endtime="20210818 10:18:21.116"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:21.074" endtime="20210818 10:18:21.116"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:20.647" endtime="20210818 10:18:21.117"/>
+</test>
+<test id="s1-t11" name="Test Incorrect Password User Log In">
+<kw name="Open Log In Page" library="LogInPage">
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<arg>${LOG_IN_LINK}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20210818 10:18:21.132" level="INFO">Current page contains link 'Log In'.</msg>
+<status status="PASS" starttime="20210818 10:18:21.120" endtime="20210818 10:18:21.132"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${LOG_IN_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:21.132" level="INFO">Clicking link 'Log In'.</msg>
+<status status="PASS" starttime="20210818 10:18:21.132" endtime="20210818 10:18:21.188"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LOG_IN_LABEL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210818 10:18:21.188" endtime="20210818 10:18:21.207"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${LOG_IN_LABEL}</arg>
+<arg>Log In</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:21.208" level="INFO">Verifying element 'css:body section header h1' contains exact text 'Log In'.</msg>
+<status status="PASS" starttime="20210818 10:18:21.207" endtime="20210818 10:18:21.225"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:21.120" endtime="20210818 10:18:21.225"/>
+</kw>
+<kw name="Input Login Username" library="LogInPage">
+<arg>${username}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${LOG_IN_FORM_USERNAME_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:21.244" level="INFO">Element 'id:username' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:21.227" endtime="20210818 10:18:21.244"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOG_IN_FORM_USERNAME_EDIT}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:21.245" level="INFO">Typing text 'GaryGendel' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20210818 10:18:21.244" endtime="20210818 10:18:21.309"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:21.226" endtime="20210818 10:18:21.309"/>
+</kw>
+<kw name="Input Login Password" library="LogInPage">
+<arg>${username}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${LOG_IN_FORM_PASSWORD_EDIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:21.328" level="INFO">Element 'id:password' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:21.310" endtime="20210818 10:18:21.328"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOG_IN_FORM_PASSWORD_EDIT}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:21.328" level="INFO">Typing text 'GaryGendel' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210818 10:18:21.328" endtime="20210818 10:18:21.393"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:21.310" endtime="20210818 10:18:21.393"/>
+</kw>
+<kw name="Click Log In Button" library="LogInPage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${LOG_IN_BUTTON}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:21.411" level="INFO">Element '//section[@class="content"]/form/input[@value="Log In" and @type="submit"]' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:21.394" endtime="20210818 10:18:21.412"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOG_IN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:21.412" level="INFO">Clicking button '//section[@class="content"]/form/input[@value="Log In" and @type="submit"]'.</msg>
+<status status="PASS" starttime="20210818 10:18:21.412" endtime="20210818 10:18:21.521"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${LOG_IN_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20210818 10:18:21.521" endtime="20210818 10:18:21.529"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:21.394" endtime="20210818 10:18:21.529"/>
+</kw>
+<kw name="Initialize Log In Error Page" library="LogInErrorPage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${ERROR_PAGE_LABEL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:21.549" level="INFO">Element 'css:body section header h1' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:21.530" endtime="20210818 10:18:21.549"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${ERROR_PAGE_LABEL}</arg>
+<arg>Login Failure</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:21.550" level="INFO">Verifying element 'css:body section header h1' contains exact text 'Login Failure'.</msg>
+<status status="PASS" starttime="20210818 10:18:21.549" endtime="20210818 10:18:21.566"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:21.530" endtime="20210818 10:18:21.566"/>
+</kw>
+<kw name="Log In Error Message Should Be Shown" library="LogInErrorPage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${ERROR_PAGE_MESSAGE}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:21.584" level="INFO">Element 'css:body section p' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:21.568" endtime="20210818 10:18:21.584"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${ERROR_PAGE_MESSAGE}</arg>
+<arg>You provided incorrect login details</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20210818 10:18:21.602" level="INFO">Element 'css:body section p' contains text 'You provided incorrect login details'.</msg>
+<status status="PASS" starttime="20210818 10:18:21.584" endtime="20210818 10:18:21.602"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:21.567" endtime="20210818 10:18:21.602"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:21.119" endtime="20210818 10:18:21.603"/>
+</test>
+<test id="s1-t12" name="Test Return To Default Page">
+<kw name="Open Default Page" library="DefaultPage">
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<arg>${LOGO_LINK}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20210818 10:18:21.619" level="INFO">Current page contains link 'Demo app'.</msg>
+<status status="PASS" starttime="20210818 10:18:21.605" endtime="20210818 10:18:21.619"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${LOGO_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210818 10:18:21.619" level="INFO">Clicking link 'Demo app'.</msg>
+<status status="PASS" starttime="20210818 10:18:21.619" endtime="20210818 10:18:21.676"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${DEFAULT_PAGE_LABEL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210818 10:18:21.676" endtime="20210818 10:18:21.695"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>index page - Demo App</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210818 10:18:21.700" level="INFO">Page title is 'index page - Demo App'.</msg>
+<status status="PASS" starttime="20210818 10:18:21.695" endtime="20210818 10:18:21.700"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${DEFAULT_PAGE_LABEL}</arg>
+<arg>index page</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210818 10:18:21.700" level="INFO">Verifying element 'css:body section header h1' contains exact text 'index page'.</msg>
+<status status="PASS" starttime="20210818 10:18:21.700" endtime="20210818 10:18:21.716"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:21.605" endtime="20210818 10:18:21.716"/>
+</kw>
+<kw name="Inititalize Default Page" library="DefaultPage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${DEFAULT_PAGE_LABEL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210818 10:18:21.734" level="INFO">Element 'css:body section header h1' is displayed.</msg>
+<status status="PASS" starttime="20210818 10:18:21.717" endtime="20210818 10:18:21.734"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:21.717" endtime="20210818 10:18:21.734"/>
+</kw>
+<status status="PASS" starttime="20210818 10:18:21.604" endtime="20210818 10:18:21.735"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210818 10:18:21.737" endtime="20210818 10:18:23.861"/>
+</kw>
+<doc>Testing User Registration Feature</doc>
+<status status="PASS" starttime="20210818 10:18:13.779" endtime="20210818 10:18:23.861"/>
+</suite>
+<statistics>
+<total>
+<stat pass="12" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="12" fail="0" skip="0" id="s1" name="RegistrationTest">RegistrationTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

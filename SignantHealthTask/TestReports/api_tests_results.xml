@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+	<testsuite errors="0" failures="2" hostname="FIHEL-7V8LTT2" name="pytest" skipped="0" tests="19" time="56.971" timestamp="2021-08-17T20:02:49.104362">
+		<testcase classname="APITests.test_api" name="test_get_users_check_status_code_equals_200" time="2.017" />
+		<testcase classname="APITests.test_api" name="test_get_users_check_message" time="2.009" />
+		<testcase classname="APITests.test_api" name="test_get_user_data_check_status_code_equals_401" time="2.009" />
+		<testcase classname="APITests.test_api" name="test_auth_get_token_without_user_creds_status_code_equals_401" time="2.009" />
+		<testcase classname="APITests.test_api" name="test_auth_get_token_with_wrong_user_name_status_code_equals_401" time="2.010" />
+		<testcase classname="APITests.test_api" name="test_auth_get_token_with_wrong_password_status_code_equals_401" time="2.058" />
+		<testcase classname="APITests.test_api" name="test_get_toke_without_user_creds_check_message" time="2.010" />
+		<testcase classname="APITests.test_api" name="test_get_toke_with_wrong_password_check_message" time="2.060" />
+		<testcase classname="APITests.test_api" name="test_get_token_with_wrong_username_check_message" time="2.009" />
+		<testcase classname="APITests.test_api" name="test_get_user_details_without_token_status_code_equals_401" time="2.016" />
+		<testcase classname="APITests.test_api" name="test_get_user_details_without_token_check_message" time="2.011" />
+		<testcase classname="APITests.test_api" name="test_get_user_details_with_token_status_code_equals_200" time="4.081" />
+		<testcase classname="APITests.test_api" name="test_get_user_details_with_token_check_message" time="4.079" />
+		<testcase classname="APITests.test_api" name="test_get_user_details_with_token_check_details" time="4.111" />
+		<testcase classname="APITests.test_api" name="test_update_user_details_without_token_status_code_equals_200" time="2.026" />
+		<testcase classname="APITests.test_api" name="test_update_user_details_without_token_check_message" time="2.025" />
+		<testcase classname="APITests.test_api" name="test_update_user_details_without_payload_status_code_equals_400" time="4.095" />
+		<testcase classname="APITests.test_api" name="test_update_user_details_with_payload_status_code_equals_201" time="4.106">
+			<failure message="assert 500 == 201&#10; +  where 500 = &lt;Response [500]&gt;.status_code">def test_update_user_details_with_payload_status_code_equals_201():
+        token_resp = new_session.session.get(base_url + auth_url, auth=HTTPBasicAuth(new_user.username, new_user.password))
+        assert token_resp.status_code == 200
+        token = token_resp.json()['token']
+        headers = {
+            "Token": token
+        }
+        url = base_url + users_url + '/' + new_user.username
+        response = new_session.session.put(url, headers=headers, data="{\"firstname\": \"NewName\"}")
+&gt;       assert response.status_code == 201
+E       assert 500 == 201
+E        +  where 500 = &lt;Response [500]&gt;.status_code
+
+APITests\test_api.py:170: AssertionError</failure>
+		</testcase>
+		<testcase classname="APITests.test_api" name="test_update_user_details_with_payload_message" time="4.078">
+			<failure message="json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)">def test_update_user_details_with_payload_message():
+        token_resp = new_session.session.get(base_url + auth_url, auth=HTTPBasicAuth(new_user.username, new_user.password))
+        assert token_resp.status_code == 200
+        token = token_resp.json()['token']
+        headers = {
+            "Token": token
+        }
+        url = base_url + users_url + '/' + new_user.username
+        response = new_session.session.put(url, headers=headers, data="{\"firstname\": \"NewName\"}")
+&gt;       assert response.json()['status'] == 'SUCCESS'
+
+APITests\test_api.py:182: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+c:\users\moskalev.sergey\appdata\local\programs\python\python37-32\lib\site-packages\requests\models.py:897: in json
+    return complexjson.loads(self.text, **kwargs)
+c:\users\moskalev.sergey\appdata\local\programs\python\python37-32\lib\json\__init__.py:348: in loads
+    return _default_decoder.decode(s)
+c:\users\moskalev.sergey\appdata\local\programs\python\python37-32\lib\json\decoder.py:337: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;json.decoder.JSONDecoder object at 0x03E56AB0&gt;
+s = '&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"&gt;\n&lt;title&gt;500 Internal Server Error&lt;/title&gt;\n&lt;h1&gt;Internal Serve...d was unable to complete your request.  Either the server is overloaded or there is an error in the application.&lt;/p&gt;\n'
+idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+
+        """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+&gt;           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+c:\users\moskalev.sergey\appdata\local\programs\python\python37-32\lib\json\decoder.py:355: JSONDecodeError</failure>
+		</testcase>
+	</testsuite>
+</testsuites>
