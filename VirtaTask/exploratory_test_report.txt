@@ -1,0 +1,84 @@
+Exploratory testing report
+
+According to the requirements from the YAML file there are three main functions available in the service described in StationTestRequest schema:
+- getVersion
+- getInterval
+- setValues
+
+I would create 3 main tests cases to cover the functions.
+1) Get Station Version (tests that getVersion returns a string version of the station).
+2) Get Station Interval (tests that getInterval returns an integer interval of the station).
+3) Set Station Interval (tests that setValues returns a string response — either "OK" OR "FAILED").
+
+I would also add 2 more test cases to extend the coverage.
+4) Update Station Interval (tests that setValues sets an interval for the station and getInterval returns the updated interval).
+5) Bad Request Response (negative test to cover that incorrect command in the POST request returns "400 Bad Request").
+
+Postman can be used for exploratory testing. 5 POST requests with different payload can be created in it to run each test scenario from above.
+All tests should be run on each of 5 stations deployed in the test environment.
+All 5 tests can and should be automated to decrease testing time in the future. I used Python "Requests" library to run those 5 tests, the library should be installed.
+StationTests.py should be run with Python in order to execute the tests. The test results file will be created in the same folder with the script file.
+
+Test results:
+Station 1:
+Get Station Version - PASSED
+Get Station Interval - PASSED
+Set Station Interval - PASSED
+Update Station Interval - FAILED
+Bad Request Response - PASSED
+
+Station 2:
+Get Station Version - PASSED
+Get Station Interval - PASSED
+Set Station Interval - PASSED
+Update Station Interval - FAILED
+Bad Request Response - PASSED
+
+Station 3:
+Get Station Version - PASSED
+Get Station Interval - PASSED
+Set Station Interval - PASSED
+Update Station Interval - FAILED
+Bad Request Response - PASSED
+
+Station 4:
+Get Station Version - PASSED
+Get Station Interval - PASSED
+Set Station Interval - FAILED
+Update Station Interval - FAILED
+Bad Request Response - PASSED
+
+Station 5:
+Get Station Version - FAILED
+Get Station Interval - FAILED
+Set Station Interval - FAILED
+Update Station Interval - FAILED
+Bad Request Response - PASSED
+
+Bugs found:
+1) Station 4 gets wrong response object message when setting values
+Steps:
+Send POST request to set any integer interval values for Station 4.
+    - URL: https://api-energy-k8s.test.virtaglobal.com/v1/tests/4
+    - requestBody: {"command": "setValues", "payload": 22}
+Expected result: response object should be {"result": "OK"} or {"result": "FAILED"}
+Actual result: response object is {"result": true}
+
+2) Station 5 is not responding
+Steps:
+Send POST request to get version from Station 5.
+    - URL: https://api-energy-k8s.test.virtaglobal.com/v1/tests/5
+    - requestBody: "command": "getVersion"
+Expected result: response code should be 200.
+Actual result: response code is 500.
+
+3) Update interval values do not work on Station 3
+Steps:
+Send POST request to set any integer interval values for Station 3.
+    - URL: https://api-energy-k8s.test.virtaglobal.com/v1/tests/3
+    - requestBody: {"command": "setValues", "payload": 22}
+Send POST request to get integer interval values for Station 3.
+    - URL: https://api-energy-k8s.test.virtaglobal.com/v1/tests/3
+    - requestBody: {"command": "getInterval"}
+Expected result: response object should have an integer as set {"result": 22}
+Actual result: response object is as was before {"result": 20}

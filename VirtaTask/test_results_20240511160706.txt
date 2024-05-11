@@ -1,0 +1,40 @@
+Start testing station with ID 1
+PASSED: Get version from station with ID 1
+PASSED: Get interval from station with ID 1
+PASSED: Set values for station with ID 1
+FAILED: Update interval for station with ID 1
+PASSED: Bad request for station with ID 1
+End testing station with ID 1
+--------------------------------------------------
+Start testing station with ID 2
+PASSED: Get version from station with ID 2
+PASSED: Get interval from station with ID 2
+PASSED: Set values for station with ID 2
+FAILED: Update interval for station with ID 2
+PASSED: Bad request for station with ID 2
+End testing station with ID 2
+--------------------------------------------------
+Start testing station with ID 3
+PASSED: Get version from station with ID 3
+PASSED: Get interval from station with ID 3
+PASSED: Set values for station with ID 3
+FAILED: Update interval for station with ID 3
+PASSED: Bad request for station with ID 3
+End testing station with ID 3
+--------------------------------------------------
+Start testing station with ID 4
+PASSED: Get version from station with ID 4
+PASSED: Get interval from station with ID 4
+FAILED: Set values for station with ID 4
+FAILED: Update interval for station with ID 4
+PASSED: Bad request for station with ID 4
+End testing station with ID 4
+--------------------------------------------------
+Start testing station with ID 5
+FAILED: Get version from station with ID 5
+FAILED: Get interval from station with ID 5
+FAILED: Set values for station with ID 5
+FAILED: Update interval for station with ID 5
+PASSED: Bad request for station with ID 5
+End testing station with ID 5
+--------------------------------------------------
